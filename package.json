@@ -1,0 +1,56 @@
+{
+  "name": "dsh-session-admin",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Session administration for the DSH Web GUI: list, archive, unarchive, and move stored sessions to a 90-day trash (restore or purge). Deletion detaches the live session so the UI updates at once, with a tombstone replay for the cases the host will not release.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "dsh.plugin.json",
+    "scripts",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node scripts/test-host.mjs",
+    "install:profile": "node scripts/install.mjs",
+    "check:api": "node scripts/check-api.mjs"
+  },
+  "author": "Full626",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/Full626/dsh-session-admin.git" },
+  "homepage": "https://github.com/Full626/dsh-session-admin#readme",
+  "bugs": { "url": "https://github.com/Full626/dsh-session-admin/issues" },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "session",
+    "delete",
+    "archive"
+  ]
+}

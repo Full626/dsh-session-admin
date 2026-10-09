@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+
+# pnpm pack output: a shareable artifact for offline installs, not repo content
+*.tgz
+
+# Safety copies an installer writes beside a profile's files
+*.session-admin-backup
+*.miku-backup
+
+# Local build/debug noise
+*.log
+*.tmp
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

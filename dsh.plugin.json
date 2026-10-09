@@ -1,0 +1,14 @@
+{
+  "name": "dsh-session-admin",
+  "description": "List, archive, unarchive and truly delete DSH sessions from the Web GUI Settings.",
+  "version": "0.1.0",
+  "entry": {
+    "name": "dsh-session-admin",
+    "inject": [
+      "webServer"
+    ]
+  },
+  "client": {
+    "platform": "web"
+  }
+}

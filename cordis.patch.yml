@@ -1,0 +1,8 @@
+# dsh-session-admin bundle layer: mount the session administration plugin.
+#
+# A profile composes its tree from the bundles listed in its package.json
+# `dsh.profile.bundles`; this file is the layer this package contributes when
+# it is selected there. Selecting the package is all an install needs.
+- insert:
+    - id: dsh-session-admin
+      name: 'dsh-session-admin'
